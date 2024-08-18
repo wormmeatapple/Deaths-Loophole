@@ -20,13 +20,8 @@ public class characterMoveScript : MonoBehaviour
     {
         playerControls.Disable();
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    
     void Update()
     {
         moveDirection = playerControls.ReadValue<Vector2>();
