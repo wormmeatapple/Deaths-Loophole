@@ -20,7 +20,7 @@ public class bulletMove : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Player"))
+        if (collision.CompareTag("Obstacle") || collision.CompareTag("Enemy"))
         {
             Destroy(gameObject);
         }
