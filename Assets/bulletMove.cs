@@ -5,26 +5,24 @@ using UnityEngine;
 public class bulletMove : MonoBehaviour
 {
     public GameObject cursor;
-    private Vector3 cursorLoc;
+    public Rigidbody2D rb;
+    private Vector2 cursorLoc;
     public float bulletSpeed = 10f;
 
     private void Start()
     {
-        cursorLoc = getCursorLoc();
-    }
-
-    void Update()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, cursorLoc, bulletSpeed * Time.deltaTime);
-    }
-
-    private Vector3 getCursorLoc()
-    {
-        return cursor.transform.position;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
+        cursorLoc = cursor.transform.position;
         
+        Vector2 direction = (cursorLoc - rb.position).normalized;
+        
+        rb.velocity = direction * bulletSpeed;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
