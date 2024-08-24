@@ -6,14 +6,15 @@ using UnityEngine;
 public class slimeScript : MonoBehaviour
 {
     public float moveSpeed = 10f;
-    public GameObject player;
+    public Transform player;
+    public GameObject curvedBullet;
     public LayerMask obstacleLayer;
     public float moveInterval = 7f;
     public float pauseDuration = 1f;
     public float attackInterval = 10f;
     public float radius = 5f;
     public float bulletSpeed;
-    public GameObject curvedBullet;
+    
 
 
     private float attackTimer = 0f;
@@ -27,7 +28,8 @@ public class slimeScript : MonoBehaviour
     {
         StartCoroutine(moveAndWait());
         GameObject curvedBullet = GetComponent<GameObject>();
-        
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+
     }
     void Update()
     {
@@ -63,7 +65,7 @@ public class slimeScript : MonoBehaviour
     private void chooseRandomDirection()
     {
         float randomAngle = Random.Range(0f, 360f);
-        moveDirection = new Vector2(Mathf.Cos(randomAngle), Mathf.Sin(randomAngle)).normalized;
+        moveDirection = new Vector2(Mathf.Cos(randomAngle * Mathf.Deg2Rad), Mathf.Sin(randomAngle * Mathf.Deg2Rad)).normalized;
     }
 
 
@@ -81,15 +83,17 @@ public class slimeScript : MonoBehaviour
     }
     private void Roam()
     {
-        if (moveTimer >= moveInterval)
+        if (moveTimer >= moveInterval || moveDirection == Vector2.zero)
         {
             chooseRandomDirection();
+            moveTimer = 0f;
         }
 
         Vector2 currentPosition = transform.position;
         Vector2 targetPosition = currentPosition + moveDirection;
         Vector2 direction = Vector2.MoveTowards(currentPosition, targetPosition, moveSpeed * Time.deltaTime);
         transform.position = direction;
+        moveTimer += Time.deltaTime;
     }
 
     private void Approach()
@@ -104,7 +108,7 @@ public class slimeScript : MonoBehaviour
     private void Attack()
     {
         spawnBulletsInCircle(8);
-        Debug.Log("attack");
+        
     }
     public void seePlayer()
     {
@@ -126,7 +130,6 @@ public class slimeScript : MonoBehaviour
 
     private void spawnBulletsInCircle(int numberOfBullets)
     {
-        moveTime = 0f;
         float angleStep = 360f / numberOfBullets;
         float angle = 0f;
 

@@ -26,6 +26,7 @@ public class characterMoveScript : MonoBehaviour
     void Update()
     {
         moveDirection = playerControls.ReadValue<Vector2>();
+
     }
 
     private void FixedUpdate()

@@ -134,7 +134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20
-  player: {fileID: 6326887817131813935, guid: 69ff893b677bd5e458fe3110d12bc67d, type: 3}
+  player: {fileID: 6980563726017775724, guid: 69ff893b677bd5e458fe3110d12bc67d, type: 3}
+  curvedBullet: {fileID: 2807185944020559705, guid: 207b9bce20f9d374da124e0bef531fa2, type: 3}
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -142,5 +143,4 @@ MonoBehaviour:
   pauseDuration: 1
   attackInterval: 5
   radius: 5
-  curvedBullet: {fileID: 2807185944020559705, guid: 207b9bce20f9d374da124e0bef531fa2, type: 3}
   bulletSpeed: 0
