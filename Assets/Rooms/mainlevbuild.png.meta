@@ -786,9 +786,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 619
-        y: 300
-        width: 73
-        height: 73
+        y: 299
+        width: 74
+        height: 74
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -811,7 +811,7 @@ TextureImporter:
         width: 64
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -832,7 +832,7 @@ TextureImporter:
         width: 64
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -840,6 +840,111 @@ TextureImporter:
       bones: []
       spriteID: a11676b3b9f88c348bac8330d419cd5e
       internalID: -1306957212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pitFront
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 333
+        width: 64
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13844759b4a9f224f8c02bd83b66e2cf
+      internalID: -743145522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pitTop
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 368
+        width: 74
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bf2856a9353c76459c6c15ca14788d7
+      internalID: -562103706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pitSideLeft
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 299
+        width: 5
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e833069c22703f64fb6216aa692febf9
+      internalID: 841150569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pitSideRIght
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 299
+        width: 5
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ecc1341f04d064d8bc863a408dd840
+      internalID: 1804339145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pitBottom
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 299
+        width: 74
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfdb73ac665e6824e955ba9844036466
+      internalID: -1461752805
       vertices: []
       indices: 
       edges: []
@@ -868,6 +973,11 @@ TextureImporter:
       pebbleFloor: -503924130
       pillar: -413658340
       pit: 1887994590
+      pitBottom: -1461752805
+      pitFront: -743145522
+      pitSideLeft: 841150569
+      pitSideRIght: 1804339145
+      pitTop: -562103706
       rightCorner: -1604563130
       rightStairs: 2132395844
       skelHoles: 502288806
